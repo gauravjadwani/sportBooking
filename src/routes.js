@@ -3,7 +3,8 @@ import {Route, IndexRoute} from 'react-router';
 import App from './App';
 // import Header from './components/common/Header';
 import Signup from './components/Signup';
-import S from './components/s';
+import LandingScreen from './components/LandingScreen';
+import PaperComponent from './components/PaperComponent';
 
 
 
@@ -13,7 +14,7 @@ import S from './components/s';
 export default (
   <Route path="/" component={App}>
   <Route path="Signup" component={Signup}/>
-    <IndexRoute component={S}/>
+    <IndexRoute component={LandingScreen}/>
 
   </Route>
 );
