@@ -11,6 +11,13 @@ import routes from './routes';
 // import {Router} from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import {Router, browserHistory} from 'react-router';
-ReactDOM.render(<Router history={browserHistory} routes={routes}/>,
+import configureStore from './store/configureStore';
+import {Provider} from 'react-redux';
+
+const store = configureStore();
+ReactDOM.render(
+    <Provider store={store}>
+  <Router history={browserHistory} routes={routes}/>
+    </Provider>,
 document.getElementById('root'));
 registerServiceWorker();

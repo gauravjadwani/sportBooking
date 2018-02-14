@@ -8,55 +8,63 @@ class LandingScreen extends React.Component {
     this.c=[
       {
         id:'1',
-       img: 'images/grid-list/00-52-29-429_640.jpg',
+       img: 'https://statics.sportskeeda.com/wp-content/uploads/2013/03/hall-inside-1451039-1024x639.jpg',
        title: 'Breakfast',
        author: 'jill111',
+       address:'jayanagar'
      },
      {
        id:'2',
-      img: 'images/grid-list/00-52-29-429_640.jpg',
+      img: 'https://statics.sportskeeda.com/wp-content/uploads/2013/03/hall-inside-1451039-1024x639.jpg',
       title: 'Breakfast',
       author: 'jill111',
+      address:'jayanagar'
     },
     {
       id:'3',
-     img: 'images/grid-list/00-52-29-429_640.jpg',
+     img: 'https://statics.sportskeeda.com/wp-content/uploads/2013/03/hall-inside-1451039-1024x639.jpg',
      title: 'Breakfast',
      author: 'jill111',
+     address:'jayanagar'
    },
    {
      id:'4',
-    img: 'images/grid-list/00-52-29-429_640.jpg',
+    img: 'https://statics.sportskeeda.com/wp-content/uploads/2013/03/hall-inside-1451039-1024x639.jpg',
     title: 'Breakfast',
     author: 'jill111',
+    address:'jayanagar'
   },
   ,
   {
     id:'5',
-   img: 'images/grid-list/00-52-29-429_640.jpg',
+   img: 'https://statics.sportskeeda.com/wp-content/uploads/2013/03/hall-inside-1451039-1024x639.jpg',
    title: 'Breakfast',
    author: 'jill111',
+   address:'jayanagar'
  },
  ,
  {
    id:'6',
-  img: 'images/grid-list/00-52-29-429_640.jpg',
+  img: 'https://statics.sportskeeda.com/wp-content/uploads/2013/03/hall-inside-1451039-1024x639.jpg',
   title: 'Breakfast',
   author: 'jill111',
+  address:'jayanagar'
 },
 ,
 {
   id:'7',
- img: 'images/grid-list/00-52-29-429_640.jpg',
+ img: 'https://statics.sportskeeda.com/wp-content/uploads/2013/03/hall-inside-1451039-1024x639.jpg',
  title: 'Breakfast',
  author: 'jill111',
+ address:'jayanagar'
 },
 ,
 {
   id:'8',
- img: 'images/grid-list/00-52-29-429_640.jpg',
+ img: 'https://statics.sportskeeda.com/wp-content/uploads/2013/03/hall-inside-1451039-1024x639.jpg',
  title: 'Breakfast',
  author: 'jill111',
+ address:'jayanagar'
 }
     ];
 

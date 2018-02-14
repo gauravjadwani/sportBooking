@@ -5,6 +5,7 @@ import App from './App';
 import Signup from './components/Signup';
 import LandingScreen from './components/LandingScreen';
 import PaperComponent from './components/PaperComponent';
+import Details from './components/Details';
 
 
 
@@ -15,6 +16,7 @@ export default (
   <Route path="/" component={App}>
   <Route path="Signup" component={Signup}/>
     <IndexRoute component={LandingScreen}/>
+    <Route path='/details' component={Details}/>
 
   </Route>
 );
