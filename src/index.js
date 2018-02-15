@@ -13,8 +13,10 @@ import ReactDOM from 'react-dom';
 import {Router, browserHistory} from 'react-router';
 import configureStore from './store/configureStore';
 import {Provider} from 'react-redux';
-
-const store = configureStore();
+import thunk from 'redux-thunk';
+import {applyMiddleware} from 'redux';
+const store = configureStore(applyMiddleware(thunk));
+// const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
 ReactDOM.render(
     <Provider store={store}>
   <Router history={browserHistory} routes={routes}/>

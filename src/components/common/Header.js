@@ -8,6 +8,7 @@ import FlatButton from 'material-ui/FlatButton';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import RaisedButton from 'material-ui/RaisedButton';
 import Drawer from 'material-ui/Drawer';
+import CircularProgress from 'material-ui/CircularProgress';
 // import './css/svg.css';
 
 const Logged = (props) => (<IconMenu  {...props} iconButtonElement={<IconButton><MoreVertIcon className="svgColor" style={{color:'#fffff'}}/></IconButton>} targetOrigin={{
@@ -35,23 +36,19 @@ class AppBarExampleIcon extends React.Component {
       open: !this.state.open
     });
   }
-  Drawerr() {
-    <div>
-      <RaisedButton label="Open Drawer" onClick={this.handleToggle}/>
-      <Drawer docked={this.state.open} width={200} open={true} onRequestChange={(open) => this.setState({open})}>
-        <MenuItem onClick={this.handleClose}>Menu Item</MenuItem>
-        <MenuItem onClick={this.handleClose}>Menu Item 2</MenuItem>
-      </Drawer>
-    </div>
-  }
 
   handleClose = () => this.setState({open: false});
   render() {
-    return (<MuiThemeProvider>
+    return (
+      <MuiThemeProvider>
+        <div>
       <AppBar title="SportsBooking" left='100' iconClassNameRight="muidocs-icon-navigation-expand-more" style={{
           'text-align' : 'center'
-        }} iconElementRight={<Logged />} iconElementLight={this.Drawerr} onLeftIconButtonClick={this.handleToggle}/>
-    </MuiThemeProvider>);
+        }} iconElementRight={<Logged />}  onLeftIconButtonClick={this.handleToggle}/>
+    <CircularProgress size={80} thickness={5} />
+    </div>
+    </MuiThemeProvider>
+);
   }
 }
 export default AppBarExampleIcon;
