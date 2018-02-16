@@ -38,17 +38,22 @@ class AppBarExampleIcon extends React.Component {
   }
 
   handleClose = () => this.setState({open: false});
-  render() {
+  render(props) {
+    console.log(this.props,'header');
     return (
+
       <MuiThemeProvider>
         <div>
-      <AppBar title="SportsBooking" left='100' iconClassNameRight="muidocs-icon-navigation-expand-more" style={{
+<AppBar title="SportsBooking" left='100' iconClassNameRight="muidocs-icon-navigation-expand-more" style={{
           'text-align' : 'center'
         }} iconElementRight={<Logged />}  onLeftIconButtonClick={this.handleToggle}/>
-    <CircularProgress size={80} thickness={5} />
-    </div>
+  </div>
     </MuiThemeProvider>
-);
+
+)
   }
 }
+
+
+// export default connect(mapStateToProps,{LOAD_FIREBASE_DATA})(AppBarExampleIcon);
 export default AppBarExampleIcon;

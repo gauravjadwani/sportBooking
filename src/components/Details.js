@@ -15,35 +15,42 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Divider from 'material-ui/Divider';
 import {Carousel} from 'react-responsive-carousel';
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
+import {connect} from 'react-redux';
+import {LOAD_FIREBASE_DATA} from './../actions';
 // import './css/detailsCard.css';
 
 class DetailsCard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isloading: true,
-      roomDetails: []
-    };
+    // this.state = {
+    //   isloading: true,
+    //   roomDetails: []
+    // };
+console.log(props.data,'detailcs');
   }
 
   componentWillMount = () => {
-    let id = (window.location.href).split("=")[1];
-    let roomDetails = (JSON.parse(localStorage.getItem('data'))[id]);
-    this.setState({roomDetails: roomDetails});
+    // let id = (window.location.href).split("=")[1];
+    // let roomDetails = (JSON.parse(localStorage.getItem('data'))[id]);
+    // this.setState({roomDetails: roomDetails});
   }
 
   render() {
+      let id = (window.location.href).split("=")[1];
+      console.log(this.props.data[id]['seconndaryImg'],'details');
     return (<div>
       <MuiThemeProvider>
         <Card>
           <CardMedia>
             <Carousel>
-              <div>
-                <img src={this.state.roomDetails['seconndaryImg'][0]['url']} alt="ga"/>
+
+
+               <div>
+                <img src={this.props.data[id]['seconndaryImg'][0]['url']} alt="ga"/>
                 <p className="legend">Room 1</p>
               </div>
               <div>
-                <img src={this.state.roomDetails['seconndaryImg'][1]['url']} alt="ga"/>
+                <img src={this.props.data[id]['seconndaryImg'][1]['url']} alt="ga"/>
                 <p className="legend">Room 2</p>
               </div>
             </Carousel>
@@ -59,5 +66,15 @@ class DetailsCard extends React.Component {
     </div>);
   }
 }
-
-export default DetailsCard;
+const mapStateToProps = ({main})=>{
+  const {
+    isloading,
+    data
+  }=main;
+  return {
+    isloading,
+    data
+  }
+}
+export default connect(mapStateToProps,{LOAD_FIREBASE_DATA})(DetailsCard);
+// export default DetailsCard;
