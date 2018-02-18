@@ -16,8 +16,11 @@ import Divider from 'material-ui/Divider';
 import {Carousel} from 'react-responsive-carousel';
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 import {connect} from 'react-redux';
-import {LOAD_FIREBASE_DATA} from './../actions';
+// import {SHOW_MODAL} from './../actions';
 // import './css/detailsCard.css';
+import CustomModal from './common/Modal';
+import {Button}  from 'react-bootstrap';
+import {SHOW_MODAL} from './../actions';
 
 class DetailsCard extends React.Component {
   constructor(props) {
@@ -38,8 +41,10 @@ console.log(props.data,'detailcs');
   render() {
       let id = (window.location.href).split("=")[1];
       console.log(this.props.data[id]['seconndaryImg'],'details');
-    return (<div>
+    return (
       <MuiThemeProvider>
+        <div>
+
         <Card>
           <CardMedia>
             <Carousel>
@@ -57,24 +62,36 @@ console.log(props.data,'detailcs');
           </CardMedia>
           <CardText>
             This spacious 2 bhk multistorey apartment is available for rental and is located in the heart of HSR Layout. It is a semi-furnished property. It is on the fourth floor of the building (total number of floors are 4). The property has 2 bathrooms and 1 balcony. It is well connected to the city areas. It is made in way to provide a comfortable living for the residents. Please contact us for more detail
+            This spacious 2 bhk multistorey apartment is available for rental and is located in the heart of HSR Layout. It is a semi-furnished property. It is on the fourth floor of the building (total number of floors are 4). The property has 2 bathrooms and 1 balcony. It is well connected to the city areas. It is made in way to provide a comfortable living for the residents. Please contact us for more detail
+            This spacious 2 bhk multistorey apartment is available for rental and is located in the heart of HSR Layout. It is a semi-furnished property. It is on the fourth floor of the building (total number of floors are 4). The property has 2 bathrooms and 1 balcony. It is well connected to the city areas. It is made in way to provide a comfortable living for the residents. Please contact us for more detail
+
           </CardText>
           <CardActions>
-            <FlatButton label="Book Room" className="bookButton"/>
+            <Button className="btn btn-primary"
+              onClick={() => this.props.SHOW_MODAL()}
+              >Book Room</Button>
+              <Button className="btn btn-primary"
+                onClick={() => this.props.SHOW_MODAL()}
+                >Book Room</Button>
           </CardActions>
         </Card>
+<CustomModal/>
+            </div>
       </MuiThemeProvider>
-    </div>);
+    );
   }
 }
 const mapStateToProps = ({main})=>{
   const {
     isloading,
-    data
+    data,
+    showModal
   }=main;
   return {
     isloading,
-    data
+    data,
+    showModal
   }
 }
-export default connect(mapStateToProps,{LOAD_FIREBASE_DATA})(DetailsCard);
+export default connect(mapStateToProps,{SHOW_MODAL})(DetailsCard);
 // export default DetailsCard;

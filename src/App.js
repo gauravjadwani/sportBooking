@@ -8,7 +8,7 @@ class App extends Component {
   render() {
       console.log('App');
     return (
-      <div className="container-fluid">
+      <div >
      <Header/>
      {this.props.children}
    </div>

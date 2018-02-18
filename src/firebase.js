@@ -10,3 +10,7 @@ let config = {
 firebase.initializeApp(config);
 export default firebase;
 export const database = firebase.database();
+// adding for login
+export const googleProvider = new firebase.auth.GoogleAuthProvider();
+export const ref = firebase.database().ref();
+export const firebaseAuth = firebase.auth;

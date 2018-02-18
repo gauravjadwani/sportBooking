@@ -12,10 +12,13 @@ export const LOAD_FIREBASE_DATA = () => {
 
 }
 }
-export const ISLOADING = () => {
-  return {type: 'ISLOADING'}
+export const SHOW_MODAL = () => {
+  return(dispatch) => {
+    dispatch({type: 'SHOW_MODAL', payload: true});
+  }
 }
-
-export const toggleTodo = id => {
-  return {type: 'TOGGLE_TODO', id}
+export const HIDE_MODAL = () => {
+  return(dispatch) => {
+    dispatch({type: 'HIDE_MODAL', payload: false});
+  }
 }

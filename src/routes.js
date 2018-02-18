@@ -6,6 +6,9 @@ import Signup from './components/Signup';
 import LandingScreen from './components/LandingScreen';
 import PaperComponent from './components/PaperComponent';
 import Details from './components/Details';
+// import Details from './components/Details';
+import Timeslots from './components/Timeslots';
+// import Signup from './components/Signup';
 
 
 
@@ -17,6 +20,7 @@ export default (
   <Route path="Signup" component={Signup}/>
     <IndexRoute component={LandingScreen}/>
     <Route path='/details' component={Details}/>
+    <Route path='/Timeslots' component={Timeslots}/>
 
   </Route>
 );

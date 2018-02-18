@@ -5,6 +5,7 @@ import './../style/index.css';
 import {Link} from 'react-router';
 import {connect} from 'react-redux';
 import {LOAD_FIREBASE_DATA} from './../actions';
+import CustomModal from './common/Modal';
 // import {Link} from 'react-router';
 const style = {
   height: 300,
@@ -41,6 +42,7 @@ render(){
         ))
       }
     </div>
+
   </MuiThemeProvider>
 );
 }

@@ -6,73 +6,26 @@ import {database} from '../firebase';
 import {connect} from 'react-redux';
 import {LOAD_FIREBASE_DATA} from './../actions';
 import CircularProgress from 'material-ui/CircularProgress';
+// import {Modal} from 'bootstrap/js/modal';
 // import  from './../reducers';
 
 class LandingScreen extends React.Component {
   constructor(props){
     super(props);
+    // this.handleModalShow = this.handleModalShow.bind(this);
+    //   this.handleModalClose = this.handleModalClose.bind(this);
 
-//     this.c=[
-//       {
-//         id:'1',
-//        img: 'https://statics.sportskeeda.com/wp-content/uploads/2013/03/hall-inside-1451039-1024x639.jpg',
-//        title: 'Breakfast',
-//        author: 'jill111',
-//        address:'jayanagar'
-//      },
-//      {
-//        id:'2',
-//       img: 'https://statics.sportskeeda.com/wp-content/uploads/2013/03/hall-inside-1451039-1024x639.jpg',
-//       title: 'Breakfast',
-//       author: 'jill111',
-//       address:'jayanagar'
-//     },
-//     {
-//       id:'3',
-//      img: 'https://statics.sportskeeda.com/wp-content/uploads/2013/03/hall-inside-1451039-1024x639.jpg',
-//      title: 'Breakfast',
-//      author: 'jill111',
-//      address:'jayanagar'
-//    },
-//    {
-//      id:'4',
-//     img: 'https://statics.sportskeeda.com/wp-content/uploads/2013/03/hall-inside-1451039-1024x639.jpg',
-//     title: 'Breakfast',
-//     author: 'jill111',
-//     address:'jayanagar'
-//   },
-//   {
-//     id:'5',
-//    img: 'https://statics.sportskeeda.com/wp-content/uploads/2013/03/hall-inside-1451039-1024x639.jpg',
-//    title: 'Breakfast',
-//    author: 'jill111',
-//    address:'jayanagar'
-//  },
-//  {
-//    id:'6',
-//   img: 'https://statics.sportskeeda.com/wp-content/uploads/2013/03/hall-inside-1451039-1024x639.jpg',
-//   title: 'Breakfast',
-//   author: 'jill111',
-//   address:'jayanagar'
-// },
-// {
-//   id:'7',
-//  img: 'https://statics.sportskeeda.com/wp-content/uploads/2013/03/hall-inside-1451039-1024x639.jpg',
-//  title: 'Breakfast',
-//  author: 'jill111',
-//  address:'jayanagar'
-// },
-// {
-//   id:'8',
-//  img: 'https://statics.sportskeeda.com/wp-content/uploads/2013/03/hall-inside-1451039-1024x639.jpg',
-//  title: 'Breakfast',
-//  author: 'jill111',
-//  address:'jayanagar'
+      // this.state = {
+      //   showModal: false
+      // };
+    }
+//   handleModalClose() {
+//   this.setState({ showModal: false });
 // }
-//     ];
-    // const store=ConfigureStore();
-// console.log(store.getState(),'lol');
-  }
+//
+// handleModalShow() {
+//   this.setState({ showModal: true });
+// }
   componentWillMount=()=>{
      this.props.LOAD_FIREBASE_DATA();
   }
@@ -89,8 +42,10 @@ class LandingScreen extends React.Component {
          <MuiThemeProvider>
         <div>
          <PaperComponent val={this.props.data}/>
+
         </div>
            </MuiThemeProvider>
+
        )
 
      }
