@@ -1,7 +1,8 @@
 import React from "react";
-import {FontIcon, RaisedButton} from "material-ui";
+import {FontIcon,RaisedButton} from "material-ui";
 import {loginWithGoogle} from "../helpers/auth";
-import {firebaseAuth} from "../config/constants";
+import {firebaseAuth} from "../firebase";
+import {Button} from 'react-bootstrap';
 
 
 const firebaseAuthKey = "firebaseAuthInProgress";
@@ -28,10 +29,36 @@ export default class Login extends React.Component {
     }
 
     componentWillMount() {
+                 firebaseAuth().getRedirectResult().then(function(result) {
+         if (result.user) {
+         console.log("GoogleLogin Redirect result");
+         if (result.credential) {
+         // This gives you a Google Access Token. You can use it to access the Google API.
+         let token = result.credential.accessToken;
+         // ...
+         }
+         // The signed-in user info.
+         let user = result.user;
+         console.log("user:", JSON.stringify(user));
+         }
+         }).catch(function(error) {
+         // Handle Errors here.
+         var errorCode = error.code;
+         var errorMessage = error.message;
+         // The email of the user's account used.
+         var email = error.email;
+         // The firebase.auth.AuthCredential type that was used.
+         var credential = error.credential;
+         // ...
+         alert(error);
+         })
+        ;
 
-
+        /**
+         * We have appToken relevant for our backend API
+         */
         if (localStorage.getItem(appTokenKey)) {
-            this.props.history.push("/app/home");
+            this.props.history.push("/LandingScreen");
             return;
         }
 
@@ -45,9 +72,9 @@ export default class Login extends React.Component {
                 // application specific token so that you do not have to
                 // authenticate with firebase every time a user logs in
                 localStorage.setItem(appTokenKey, user.uid);
-
+                // email = ref.getAuth().password.email;
                 // store the token
-                this.props.history.push("/app/home")
+                this.props.history.push("/LandingScreen")
             }
         });
     }
@@ -66,13 +93,13 @@ const LoginPage = ({handleGoogleLogin}) => (
     <div>
         <h1>Login</h1>
         <div>
-            <RaisedButton
+            <Button
                 label="Sign in with Google"
                 labelColor={"#ffffff"}
                 backgroundColor="#dd4b39"
                 icon={<FontIcon className="fa fa-google-plus" style={iconStyles}/>}
                 onClick={handleGoogleLogin}
-            />
+            >Sign in with Google</Button>
         </div>
     </div>
 );

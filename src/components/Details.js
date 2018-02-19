@@ -21,6 +21,7 @@ import {connect} from 'react-redux';
 import CustomModal from './common/Modal';
 import {Button}  from 'react-bootstrap';
 import {SHOW_MODAL} from './../actions';
+import {Link} from 'react-router';
 
 class DetailsCard extends React.Component {
   constructor(props) {
@@ -70,9 +71,10 @@ console.log(props.data,'detailcs');
             <Button className="btn btn-primary"
               onClick={() => this.props.SHOW_MODAL()}
               >Book Room</Button>
-              <Button className="btn btn-primary"
-                onClick={() => this.props.SHOW_MODAL()}
-                >Book Room</Button>
+                <Link to={'/Timeslots'}>
+              <a className="btn btn-primary"
+                >Show Availability</a>
+                </Link>
           </CardActions>
         </Card>
 <CustomModal/>

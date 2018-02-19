@@ -1,100 +1,116 @@
 {
-  "data":{
-"0":{
-"mainImg":"https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/1.jpg?alt=media&token=0fa22f9c-74da-4b81-9541-f702b1a0e0e8",
-"title":"MNP residency 400",
-"id":0,
-"seconndaryImg":[
-{
-"url":"https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/11.jpg?alt=media&token=6fd67d6b-6646-4436-b093-0ad03d760030",
-"title":""
-},
-{
-"url":"https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/111.jpg?alt=media&token=c0280a00-19f6-4d4a-a2e6-85a7f0a8fc65",
-"title":""
-}
-],
-"details":{}
-},
-"1":{
-"mainImg":"https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/2.jpg?alt=media&token=ba8cddc2-023a-47d3-b8ce-12a45d7f9593",
-"title":"NPM residency 401",
-"id":1,
-"seconndaryImg":[
-{
-"url":"https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/22.jpg?alt=media&token=5ec3c631-5daf-4b63-a5da-9a3fa2425bcb",
-"title":""
-},
-{
-"url":"https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/222.jpg?alt=media&token=54fb3683-a5e8-46f0-bad7-1ce949f9198a",
-"title":""
-}
-],
-"details":{}
-},
-"2":{
-"mainImg":"https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/3.jpg?alt=media&token=5e60a3dd-0e4d-432c-b835-cf4d05b95508",
-"title":"NPM residency 404",
-"id":2,
-"seconndaryImg":[
-{
-"url":"https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/33.jpg?alt=media&token=8f271ff3-a337-446e-99fe-cabf7ca58a79",
-"title":""
-},
-{
-"url":"https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/33.jpg?alt=media&token=8f271ff3-a337-446e-99fe-cabf7ca58a79",
-"title":""
-}
-],
-"details":{}
-},
-"3":{
-"mainImg":"https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/4.jpg?alt=media&token=4b645157-90e1-48ee-b88d-47ad64a1a703",
-"title":"PLO residency 403",
-"id":3,
-"seconndaryImg":[
-{
-"url":"https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/44.jpg?alt=media&token=842e3a51-6cb1-46d1-bd82-f71d18ac5913",
-"title":""
-},
-{
-"url":"https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/444.jpg?alt=media&token=7b94c8e5-6891-4665-aba2-91582436f8ee",
-"title":""
-}
-],
-"details":{}
-},
-"4":{
-"mainImg":"https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/5.jpg?alt=media&token=5a4d2fb1-a6a3-4f06-94b7-cedb2906a478",
-"title":"LOK residency 403",
-"id":4,
-"seconndaryImg":[
-{
-"url":"https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/55.jpg?alt=media&token=7dd39000-eff6-479f-891c-65e4da4074b8",
-"title":""
-},
-{
-"url":"https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/555.jpg?alt=media&token=d734a136-6887-4f8c-9640-44d1ee0a6782",
-"title":""
-}
-],
-"details":{}
-},
-"5":{
-"mainImg":"https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/6.jpg?alt=media&token=031d3b1f-63e4-49da-8256-b243b0e23553",
-"title":"OIJ residency 403",
-"id":5,
-"seconndaryImg":[
-{
-"url":"https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/66.jpg?alt=media&token=d6d53f52-83fa-40ea-99d7-4bb320b6390e",
-"title":""
-},
-{
-"url":"https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/666.jpg?alt=media&token=375f00f1-d60f-4dcd-ac33-3409b8b5bb0b",
-"title":""
-}
-],
-"details":{}
-}
-}
+  "data": [
+    {
+      "id": 0,
+      "mainImg": "https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/1.jpg?alt=media&token=0fa22f9c-74da-4b81-9541-f702b1a0e0e8",
+      "seconndaryImg": [
+        {
+          "title": "",
+          "url": "https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/11.jpg?alt=media&token=6fd67d6b-6646-4436-b093-0ad03d760030"
+        },
+        {
+          "title": "",
+          "url": "https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/111.jpg?alt=media&token=c0280a00-19f6-4d4a-a2e6-85a7f0a8fc65"
+        }
+      ],
+      "title": "MNP residency 400"
+    },
+    {
+      "id": 1,
+      "mainImg": "https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/2.jpg?alt=media&token=ba8cddc2-023a-47d3-b8ce-12a45d7f9593",
+      "seconndaryImg": [
+        {
+          "title": "",
+          "url": "https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/22.jpg?alt=media&token=5ec3c631-5daf-4b63-a5da-9a3fa2425bcb"
+        },
+        {
+          "title": "",
+          "url": "https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/222.jpg?alt=media&token=54fb3683-a5e8-46f0-bad7-1ce949f9198a"
+        }
+      ],
+      "title": "NPM residency 401"
+    },
+    {
+      "id": 2,
+      "mainImg": "https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/3.jpg?alt=media&token=5e60a3dd-0e4d-432c-b835-cf4d05b95508",
+      "seconndaryImg": [
+        {
+          "title": "",
+          "url": "https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/33.jpg?alt=media&token=8f271ff3-a337-446e-99fe-cabf7ca58a79"
+        },
+        {
+          "title": "",
+          "url": "https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/33.jpg?alt=media&token=8f271ff3-a337-446e-99fe-cabf7ca58a79"
+        }
+      ],
+      "title": "NPM residency 404"
+    },
+    {
+      "id": 3,
+      "mainImg": "https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/4.jpg?alt=media&token=4b645157-90e1-48ee-b88d-47ad64a1a703",
+      "seconndaryImg": [
+        {
+          "title": "",
+          "url": "https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/44.jpg?alt=media&token=842e3a51-6cb1-46d1-bd82-f71d18ac5913"
+        },
+        {
+          "title": "",
+          "url": "https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/444.jpg?alt=media&token=7b94c8e5-6891-4665-aba2-91582436f8ee"
+        }
+      ],
+      "title": "PLO residency 403"
+    },
+    {
+      "id": 4,
+      "mainImg": "https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/5.jpg?alt=media&token=5a4d2fb1-a6a3-4f06-94b7-cedb2906a478",
+      "seconndaryImg": [
+        {
+          "title": "",
+          "url": "https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/55.jpg?alt=media&token=7dd39000-eff6-479f-891c-65e4da4074b8"
+        },
+        {
+          "title": "",
+          "url": "https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/555.jpg?alt=media&token=d734a136-6887-4f8c-9640-44d1ee0a6782"
+        }
+      ],
+      "title": "LOK residency 403"
+    },
+    {
+      "id": 5,
+      "mainImg": "https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/6.jpg?alt=media&token=031d3b1f-63e4-49da-8256-b243b0e23553",
+      "seconndaryImg": [
+        {
+          "title": "",
+          "url": "https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/66.jpg?alt=media&token=d6d53f52-83fa-40ea-99d7-4bb320b6390e"
+        },
+        {
+          "title": "",
+          "url": "https://firebasestorage.googleapis.com/v0/b/roombooking-80143.appspot.com/o/666.jpg?alt=media&token=375f00f1-d60f-4dcd-ac33-3409b8b5bb0b"
+        }
+      ],
+      "title": "OIJ residency 403"
+    }
+  ],
+  "timesData": [
+    {
+      'title': 'All Day Event very long title',
+      'bgColor': '#ff7f50',
+      'allDay': true,
+      'start': newDate(2015,
+      3,
+      0),
+      'end': newDate(2015,
+      3,
+      1)
+    },
+    {
+      'title': 'Long Event',
+      'start': newDate(2015,
+      3,
+      7),
+      'end': newDate(2015,
+      3,
+      10)
+    }
+  ]
 }

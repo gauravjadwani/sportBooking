@@ -8,7 +8,8 @@ import PaperComponent from './components/PaperComponent';
 import Details from './components/Details';
 // import Details from './components/Details';
 import Timeslots from './components/Timeslots';
-// import Signup from './components/Signup';
+import Login from './components/Login';
+// import la from './components/Login';
 
 
 
@@ -17,9 +18,10 @@ import Timeslots from './components/Timeslots';
 
 export default (
   <Route path="/" component={App}>
-  <Route path="Signup" component={Signup}/>
+  <Route path="/login" component={Login}/>
     <IndexRoute component={LandingScreen}/>
     <Route path='/details' component={Details}/>
+    <Route path='/landingscreen' component={LandingScreen}/>
     <Route path='/Timeslots' component={Timeslots}/>
 
   </Route>
