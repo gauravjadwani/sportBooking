@@ -8,6 +8,7 @@ import PaperComponent from './components/PaperComponent';
 import Details from './components/Details';
 // import Details from './components/Details';
 import Timeslots from './components/Timeslots';
+import Timeslots2 from './components/Timeslots2';
 import Login from './components/Login';
 // import la from './components/Login';
 
@@ -23,6 +24,7 @@ export default (
     <Route path='/details' component={Details}/>
     <Route path='/landingscreen' component={LandingScreen}/>
     <Route path='/Timeslots' component={Timeslots}/>
+    <Route path='/Timeslots2' component={Timeslots2}/>
 
   </Route>
 );

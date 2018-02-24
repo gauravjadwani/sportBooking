@@ -12,15 +12,28 @@ export const LOAD_FIREBASE_DATA = () => {
 
 }
 }
-export const LOAD_FIREBASE_TIMESLOTS_DATA = () => {
+// export const LOAD_FIREBASE_TIMESLOTS_DATA = () => {
+//
+//     return(dispatch) => {
+//       const ref = database.ref("data");
+//       let tilesobject = [];
+//       ref.once("value").then(function(snapshot) {
+//         let obj = snapshot.val();
+//         console.log(obj,'firebase');
+//       dispatch({type: 'LOAD_FIREBASE_TIMESLOTS_DATA', payload: obj});
+//     })
+//
+// }
+// }
+export const PUT_FIREBASE_TIMESLOTS_DATA = () => {
 
     return(dispatch) => {
-      const ref = database.ref("data");
+      const ref = database.ref("timesData:1");
       let tilesobject = [];
       ref.once("value").then(function(snapshot) {
         let obj = snapshot.val();
-        console.log(obj,'firebase');
-      dispatch({type: 'LOAD_FIREBASE_TIMESLOTS_DATA', payload: obj});
+        console.log(obj,'Timeslots data in actions');
+      // dispatch({type: 'LOAD_FIREBASE_TIMESLOTS_DATA', payload: obj});
     })
 
 }

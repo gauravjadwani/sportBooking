@@ -71,7 +71,7 @@ console.log(props.data,'detailcs');
             <Button className="btn btn-primary"
               onClick={() => this.props.SHOW_MODAL()}
               >Book Room</Button>
-                <Link to={'/Timeslots'}>
+                <Link to={'/Timeslots?id='+id}>
               <a className="btn btn-primary"
                 >Show Availability</a>
                 </Link>
