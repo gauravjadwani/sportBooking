@@ -11,7 +11,7 @@ import Drawer from 'material-ui/Drawer';
 import CircularProgress from 'material-ui/CircularProgress';
 // import './css/svg.css';
 
-const Logged = (props) => (<IconMenu  {...props} iconButtonElement={<IconButton><MoreVertIcon className="svgColor" style={{color:'#fffff'}}/></IconButton>} targetOrigin={{
+const Logged = (props) => (<IconMenu {...props} iconButtonElement={<IconButton> < MoreVertIcon className = "svgColor" style = {{color:'#fffff'}}/></IconButton >} targetOrigin={{
     horizontal: 'right',
     vertical: 'top'
   }} anchorOrigin={{
@@ -39,21 +39,16 @@ class AppBarExampleIcon extends React.Component {
 
   handleClose = () => this.setState({open: false});
   render(props) {
-    console.log(this.props,'header');
-    return (
-
-      <MuiThemeProvider>
-        <div>
-<AppBar title="SportsBooking" left='100' iconClassNameRight="muidocs-icon-navigation-expand-more" style={{
-          'text-align' : 'center'
-        }} iconElementRight={<Logged />}  onLeftIconButtonClick={this.handleToggle}/>
-  </div>
-    </MuiThemeProvider>
-
-)
+    console.log(this.props, 'header');
+    return (<MuiThemeProvider>
+      <div>
+        <AppBar title="SportsBooking" left='100' iconClassNameRight="muidocs-icon-navigation-expand-more" style={{
+            'text-align' : 'center'
+          }} iconElementRight={<Logged />} onLeftIconButtonClick={this.handleToggle}/>
+      </div>
+    </MuiThemeProvider>)
   }
 }
-
 
 // export default connect(mapStateToProps,{LOAD_FIREBASE_DATA})(AppBarExampleIcon);
 export default AppBarExampleIcon;

@@ -15,52 +15,52 @@ const style = {
   display: 'inline-block'
 };
 // const PaperExampleSimple = (props) => (
-const Details = (props) => (
-<div>
-<img src={props.imgDetails.mainImg} align="middle" height="200px" width="250px"/>
-<div className="cardTitle"><b>{props.imgDetails.title}</b></div>
-<div className="cardAddress"><b>{props.imgDetails.address}</b></div>
-</div>
-);
+const Details = (props) => (<div>
+  <img src={props.imgDetails.mainImg} align="middle" height="200px" width="250px"/>
+  <div className="cardTitle">
+    <b>{props.imgDetails.title}</b>
+  </div>
+  <div className="cardAddress">
+    <b>{props.imgDetails.address}</b>
+  </div>
+
+  {
+    [1, 2, 3, 4, 5].map(function() {
+      return <span className={(
+          parseInt(props.r))
+          ? "fa fa-star checked"
+          : "fa fa-star"}></span>
+    })
+  }
+</div>);
 class PaperExampleSimple extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
   }
-render(){
-    console.log(this.props.val,'paper');
-  return (
-    <MuiThemeProvider>
-  <div className="parentPapper">
-      {
-        this.props.val.map((object) => (
-            <Link to={'/Details?id='+object.id}>
-          <Paper id={object.id} key={object.id} style={style} zDepth={3}
-          children={<Details imgDetails={object}/>}/>
-    </Link>
+  render() {
+    console.log(this.props.val, 'paper');
+    var random = Math.abs(parseInt(Math.random() * 10) - 5);
+    console.log(random, 'in render');
+    return (<MuiThemeProvider>
+      <div className="parentPapper">
+        {
+          this.props.val.map((object) => (<Link to={'/Details?id=' + object.id}>
+            <Paper id={object.id} key={object.id} style={style} zDepth={3} children={<Details imgDetails = {
+                object
+              }
+              r = {
+                random
+              } />}/>
+          </Link>))
+        }
+      </div>
 
-        ))
-      }
-    </div>
-
-  </MuiThemeProvider>
-);
-}
-}
-const mapStateToProps = ({main})=>{
-  const {
-    isloading,
-    data
-  }=main;
-  return {
-    isloading,
-    data
+    </MuiThemeProvider>);
   }
 }
-// PaperExampleSimple.propTypes = {
-//    val: React.PropTypes.arrayOf(React.PropTypes.shape({
-//      data: React.PropTypes.string.isRequired
-//    })).isRequired
-// }
-export default connect(mapStateToProps,{LOAD_FIREBASE_DATA})(PaperExampleSimple);
-// export default PaperExampleSimple;
+const mapStateToProps = ({main}) => {
+  const {isloading, data} = main;
+  return {isloading, data}
+}
+export default connect(mapStateToProps, {LOAD_FIREBASE_DATA})(PaperExampleSimple);

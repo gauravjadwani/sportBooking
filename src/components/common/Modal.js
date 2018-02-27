@@ -5,7 +5,7 @@ import {SHOW_MODAL, HIDE_MODAL} from './../../actions';
 import TimePicker from 'material-ui/TimePicker';
 import Timeslots from './../Timeslots';
 import {database} from '../../firebase';
-// import {PUT_FIREBASE_TIMESLOTS_DATA} from './../actions';
+
 
 class CustomModal extends React.Component {
   constructor(props) {
@@ -22,31 +22,47 @@ console.log(data.ttill,"data ttill");
 console.log(data.tfrom,"data tfrom");
 let id = (window.location.href).split("=")[1];
 var p='timesData:'+id;
-const ref = database.ref(p);
+const ref = database.ref();
 console.log(p,"id from modal");
 
-let eventsData = [];
+var eventsData = [];
 ref.once("value").then(function(snapshot) {
 var obj = snapshot.val();
+console.log(obj,'objj');
+if(p in obj){
+  let holder={};
+  holder['allDay']=false;
+  holder['bgColor']="#ff7f50";
+  holder['bookersname']='bookername';
+  holder['end']=''+data.ttill;
+  holder['start']=''+data.tfrom;
+  holder['title']='script';
+  console.log(eventsData,'after updating if');
+    console.log('checkif',holder,eventsData);
+    obj[p].push(holder);
+  ref.set(obj);
+}
+else{
+  let holder={};
+  holder['allDay']=false;
+  holder['bgColor']="#ff7f50";
+  holder['bookersname']='bookername';
+  holder['end']=''+data.ttill;
+  holder['start']=''+data.tfrom;
+  holder['title']='script';
+  console.log('check',holder,eventsData);
+  eventsData.push(holder);
+  obj[p]=eventsData;
+    ref.set(obj);
+}
 console.log(obj,'obj');
 eventsData=obj;
 
 console.log(data,"data inside");
-let holder={};
-holder['allDay']=false;
-holder['bgColor']="#ff7f50";
-holder['bookersname']='bookername';
-holder['end']=''+data.ttill;
-holder['start']=''+data.tfrom;
-holder['title']='script';
-eventsData.push(holder);
-console.log(eventsData,'after updating');
-ref.set(eventsData);
-// p.setState({eventsData:eventsData,isloading:false});
-
 });
 
   console.log(eventsData,'from modal');
+  this.props.HIDE_MODAL();
 }
   render() {
     console.log(this.props, 'modal.js');
@@ -86,4 +102,3 @@ const mapStateToProps = ({main}) => {
   return {isloading, data, showModal}
 }
 export default connect(mapStateToProps, {SHOW_MODAL, HIDE_MODAL})(CustomModal);
-// export default CustomModal;

@@ -1,7 +1,8 @@
 let INITIAL_STATE={
   isloading:true,
   data:'',
-  showModal:false
+  showModal:false,
+  name:''
 }
 export default (state=INITIAL_STATE,action) => {
   console.log(action,'main');
@@ -19,6 +20,10 @@ export default (state=INITIAL_STATE,action) => {
           return {...state,
             showModal:action.payload
           }
+          case 'SET_NAME':
+            return {...state,
+              name:action.payload
+            }
       default:
         return state;
   }

@@ -16,8 +16,6 @@ import Divider from 'material-ui/Divider';
 import {Carousel} from 'react-responsive-carousel';
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 import {connect} from 'react-redux';
-// import {SHOW_MODAL} from './../actions';
-// import './css/detailsCard.css';
 import CustomModal from './common/Modal';
 import {Button}  from 'react-bootstrap';
 import {SHOW_MODAL} from './../actions';
@@ -26,17 +24,7 @@ import {Link} from 'react-router';
 class DetailsCard extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   isloading: true,
-    //   roomDetails: []
-    // };
 console.log(props.data,'detailcs');
-  }
-
-  componentWillMount = () => {
-    // let id = (window.location.href).split("=")[1];
-    // let roomDetails = (JSON.parse(localStorage.getItem('data'))[id]);
-    // this.setState({roomDetails: roomDetails});
   }
 
   render() {
@@ -62,10 +50,7 @@ console.log(props.data,'detailcs');
             </Carousel>
           </CardMedia>
           <CardText>
-            This spacious 2 bhk multistorey apartment is available for rental and is located in the heart of HSR Layout. It is a semi-furnished property. It is on the fourth floor of the building (total number of floors are 4). The property has 2 bathrooms and 1 balcony. It is well connected to the city areas. It is made in way to provide a comfortable living for the residents. Please contact us for more detail
-            This spacious 2 bhk multistorey apartment is available for rental and is located in the heart of HSR Layout. It is a semi-furnished property. It is on the fourth floor of the building (total number of floors are 4). The property has 2 bathrooms and 1 balcony. It is well connected to the city areas. It is made in way to provide a comfortable living for the residents. Please contact us for more detail
-            This spacious 2 bhk multistorey apartment is available for rental and is located in the heart of HSR Layout. It is a semi-furnished property. It is on the fourth floor of the building (total number of floors are 4). The property has 2 bathrooms and 1 balcony. It is well connected to the city areas. It is made in way to provide a comfortable living for the residents. Please contact us for more detail
-
+          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
           </CardText>
           <CardActions>
             <Button className="btn btn-primary"
@@ -96,4 +81,3 @@ const mapStateToProps = ({main})=>{
   }
 }
 export default connect(mapStateToProps,{SHOW_MODAL})(DetailsCard);
-// export default DetailsCard;

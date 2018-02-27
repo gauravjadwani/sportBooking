@@ -7,3 +7,23 @@
 .cardTitle{
   margin:5%;
 }
+.checked {
+    color: orange;
+}
+.fa {
+    font-size: 25px;
+}
+
+.loading{
+   float:right;
+ }
+ .svgColor{
+fill:white !important;
+}
+.C{
+     /* float:right; */
+     display: block;
+     margin-left:50%;
+    margin-top:10%;
+ /* margin-right:auto; */
+}
